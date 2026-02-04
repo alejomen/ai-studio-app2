@@ -188,7 +188,6 @@ const App: React.FC = () => {
 
   const handleExport3D = async () => {
     if (!sceneGroupRef.current) return;
-    // NOTE: In modern three versions (r150+), examples/jsm moved to three/addons.
     const { ColladaExporter } = await import('three/addons/exporters/ColladaExporter.js');
     const exporter = new ColladaExporter();
     exporter.parse(sceneGroupRef.current, (result) => {
